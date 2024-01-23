@@ -130,3 +130,47 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+
+Drop Table if EXISTS Movies;
+Drop Table if Exists Actors;
+Drop Table if Exists Studios;
+Drop Table if Exists Roles;
+
+Create table Movies (id INTEGER Primary key autoincrement, 
+movie_title TEXT, 
+release_year Integer, 
+MPAA_rating Integer, 
+Studio_id integer
+);
+Create Table Actors
+(id Integer Primary key autoincrement,
+First_name TEXT,
+Last_name TEXT,
+Actor_id integer,
+Movie_id integer);
+Create Table Studios (
+Id Integer Primary key autoincrement,
+Studio_name Text
+);
+Create Table Roles (
+Id integer primary key autoincrement,
+Actor_ID integer,
+Character_name Text,
+Movie_id Integer
+);
+Insert into studios (Studio_name),
+values ("Warner Bros");
+
+Select * from studios;
+Insert into actors (first_name, last_name) values
+  ('Christian', 'Bale'),
+  ('Michael', 'Caine'),
+  ('Liam', 'Neeson'),
+  ('Katie', 'Holmes'),
+  ('Gary', 'Oldman'),
+  ('Heath', 'Ledger'),
+  ('Aaron', 'Eckhart'),
+  ('Maggie', 'Gyllenhaal'),
+  ('Tom', 'Hardy'),
+  ('Joseph', 'Gordon-Levitt'),
+  ('Anne', 'Hathaway');
